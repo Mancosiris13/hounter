@@ -1,0 +1,219 @@
+.find {
+  @media only screen and(max-width:$bp-1200px) {
+    margin-bottom: 4rem;
+  }
+  @media only screen and(max-width:$bp-800px) {
+    margin: 0 1rem;
+    margin-bottom: 4rem;
+  }
+  &__blurs {
+    position: relative;
+    @media only screen and(max-width:$bp-600px) {
+      display: none;
+    }
+  }
+  text-align: center;
+  margin-bottom: 12rem;
+  position: relative;
+
+  &__up-blur {
+    position: absolute;
+    top: -10rem;
+    left: 0;
+    z-index: -10;
+  }
+  &__down-blur {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    z-index: -10;
+  }
+
+  &__h2 {
+    width: 58rem;
+    display: inline-block;
+    justify-self: center;
+    margin-bottom: 1.6rem;
+    @media only screen and(max-width:$bp-600px) {
+      width: 100%;
+    }
+  }
+
+  &__articles {
+  }
+  &__more-articles-btn--container {
+    display: block;
+    justify-self: center;
+    margin-bottom: 4.8rem;
+  }
+  &__more-articles-btn {
+    padding: 1.2rem 2.4rem;
+    background-color: $color-primary;
+    border-radius: 10rem;
+    color: $color-white;
+    border: none;
+    text-align: center;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.4rem;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+
+  &__content {
+    margin: 0 12.4rem;
+    @media only screen and(max-width:$bp-1200px) {
+      display: flex;
+      align-items: center;
+      margin: 0 1rem;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: minmax(58rem, 1fr) 1fr;
+
+    column-gap: 3.2rem;
+
+    z-index: 10;
+
+    @media only screen and(max-width:$bp-1200px) {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+    }
+  }
+
+  &__article {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: auto-fit;
+    column-gap: 3.2rem;
+    cursor: pointer;
+    transition: all 1s;
+
+    @media only screen and(max-width:$bp-1200px) {
+      padding: 0 8rem;
+    }
+    @media only screen and(max-width:$bp-1100px) {
+      padding: 0 7rem;
+    }
+    @media only screen and(max-width:$bp-1000px) {
+      padding: 0 3rem;
+    }
+    @media only screen and(max-width:$bp-900px) {
+      grid-template-columns: auto;
+      padding: 0 8rem;
+    }
+    @media only screen and(max-width:$bp-600px) {
+      padding: 0 1rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 3.2rem;
+    }
+
+    &--hide {
+      display: none;
+    }
+    &--clock-icon {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-right: 1.2rem;
+    }
+  }
+  &__article-img {
+    border-radius: 1rem;
+    width: 20rem;
+    height: 15rem;
+    display: inline-block;
+
+    @media only screen and(max-width:$bp-1200px) {
+      height: auto;
+      width: auto;
+    }
+    @media only screen and(max-width:$bp-900px) {
+      justify-self: center;
+      width: 70%;
+    }
+
+    &--container {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__article-details,
+  &__article-details-clone {
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+
+    &--owner,
+    &--owner-clone {
+      display: flex;
+      align-items: center;
+      margin-top: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+    &--owner-photo,
+    &--owner-photo-clone {
+      margin-right: 1.6rem;
+    }
+    &--owner-name,
+    &--owner-name-clone {
+      color: $color-neutral;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2.4rem;
+    }
+
+    &--name,
+    &--name-clone {
+      text-align: start;
+      color: $color-black;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 2.4rem;
+      margin-bottom: 1.6rem;
+    }
+
+    &--article-content {
+      display: none;
+      margin-bottom: 2rem;
+      @media only screen and(max-width:$bp-1200px) {
+        display: block;
+        text-align: justify;
+      }
+    }
+
+    &--article-content-clone {
+      text-align: start;
+      margin-bottom: 1.6rem;
+    }
+
+    &--date,
+    &--date-clone {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2.4rem;
+    }
+  }
+
+  &__img-clone {
+    width: 100%;
+    height: 28rem;
+    border-radius: 1.6rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__display-clone {
+    @media only screen and(max-width:$bp-1200px) {
+      display: none;
+    }
+  }
+}

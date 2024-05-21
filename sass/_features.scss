@@ -1,0 +1,255 @@
+.features {
+  margin-top: 12rem;
+  padding-left: 12.4rem;
+  max-width: 144rem;
+
+  @media only screen and(max-width:$bp-1300px) {
+    margin-left: 0;
+    padding: 3rem;
+  }
+  @media only screen and(max-width:$bp-1200px) {
+    padding-bottom: 0;
+    margin-top: 4rem;
+  }
+
+  &__yellow-line {
+    height: 2px;
+    width: 3.2rem;
+    color: $color-secondary;
+    background-color: $color-secondary;
+    position: absolute;
+    left: -3.5rem;
+  }
+  &__recommendation-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @media only screen and(max-width:$bp-1200px) {
+      justify-self: center;
+    }
+  }
+  &__recommendation {
+    color: $color-secondary;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+
+  &__navbar {
+    margin-top: 0.2rem;
+    margin-bottom: 3.6rem;
+    width: 120rem;
+    display: flex;
+    justify-content: space-between;
+    @media only screen and(max-width:$bp-1300px) {
+    }
+    @media only screen and(max-width:$bp-1200px) {
+      width: 100%;
+      justify-content: space-between;
+
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(3, min-content);
+      row-gap: 2rem;
+    }
+  }
+
+  &__h2 {
+    @media only screen and(max-width:$bp-1200px) {
+      justify-self: center;
+    }
+  }
+  &__categories {
+    display: flex;
+    @media only screen and(max-width:$bp-1200px) {
+      justify-self: center;
+
+      @media only screen and(max-width:$bp-500px) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__category {
+    display: flex;
+    padding: 1.2rem 2.4rem;
+    border: 1px solid $color-primary;
+    border-radius: 10rem;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    color: $color-primary;
+    gap: 0.8rem;
+
+    &:link,
+    &:active {
+      text-decoration: none;
+    }
+    &:not(:last-child) {
+      margin-right: 2.7rem;
+
+      @media only screen and(max-width:$bp-500px) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &--1 {
+      background-color: $color-primary-light;
+      border: none;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    margin-bottom: 12rem;
+    width: 100%;
+    white-space: nowrap;
+
+    overflow-x: auto; /* Enable horizontal overflow */
+    overflow-y: hidden;
+
+    //MAKING THE SLIDER WITH CSS AND WITH THE MOUSEPAD
+
+    scroll-snap-type: x mandatory; /* Snap to the nearest slide */
+    scrollbar-width: thin; /* "auto" or "thin" depending on your preference */
+    scrollbar-color: transparent transparent; /* Set the color of the scrollbar track and thumb */
+
+    @media only screen and(max-width:$bp-1200px) {
+      margin-bottom: 4rem;
+    }
+    &--container {
+      max-width: 144rem;
+      height: auto;
+      overflow: hidden;
+      padding: 3rem;
+      @media only screen and(max-width:$bp-1200px) {
+        padding-top: 0;
+      }
+    }
+
+    &--card {
+      position: relative;
+      display: inline-block;
+
+      transition: all 0.9s;
+      margin-right: 3.2rem;
+    }
+
+    &--tag {
+      position: absolute;
+      top: 61%;
+      margin-left: 1.6rem;
+      z-index: 100;
+      padding: 0.8rem 1.6rem;
+      border-radius: 3.2rem;
+      display: flex;
+
+      &--danger {
+        background-color: $color-danger-light;
+      }
+      &--info {
+        background-color: $color-info-light;
+      }
+      &--success {
+        background-color: $color-primary-light;
+      }
+    }
+
+    &--icon {
+      margin-right: 0.8rem;
+    }
+
+    &--label {
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      &--danger {
+        color: $color-danger;
+      }
+      &--info {
+        color: $color-info;
+      }
+      &--success {
+        color: $color-primary;
+      }
+    }
+
+    &--img {
+      border-radius: 2.4rem;
+    }
+
+    &--details {
+      margin: 2.4rem 0;
+
+      &--house-price {
+        color: $color-grey-3;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: capitalize;
+      }
+    }
+
+    &--owner-details {
+      display: grid;
+      grid-template-columns: min-content auto;
+      grid-template-rows: repeat(2, auto);
+    }
+
+    &--owner-photo {
+      grid-column: 1/2;
+      grid-row: 1/3;
+      margin-right: 1.6rem;
+      align-self: center;
+    }
+    &--owner-name {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      margin-bottom: 0.4rem;
+    }
+    &--owner-location {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      color: $color-grey-2;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2.4rem;
+    }
+  }
+}
+
+.slider {
+  &__btns {
+    @media only screen and(max-width:$bp-1200px) {
+      justify-self: center;
+    }
+  }
+  &__btn {
+    padding: 1.2rem;
+    border: 1px solid $color-primary;
+    border-radius: 10rem;
+    background-color: $color-white;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 1.6rem;
+    }
+
+    &:active {
+      background-color: $color-primary;
+    }
+
+    &--right-arrow {
+      rotate: 180deg;
+
+      color: orangered;
+    }
+  }
+}

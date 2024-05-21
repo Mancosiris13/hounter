@@ -1,0 +1,47 @@
+.coockies {
+  z-index: 100000;
+
+  position: fixed;
+  top: 90%;
+  left: 36.5%;
+  margin: 0 auto;
+  width: 46.5rem;
+  border-radius: 2.8rem;
+  padding: 1.6rem 4rem;
+  background-color: $color-primary-light;
+  color: $color-primary-dark;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media only screen and(max-width:$bp-1200px) {
+    left: 30%;
+  }
+  @media only screen and(max-width:$bp-900px) {
+    left: 22%;
+  }
+  @media only screen and(max-width:$bp-700px) {
+    left: 18%;
+  }
+  @media only screen and(max-width:$bp-600px) {
+    left: 11%;
+    width: 80%;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    margin-right: 1.2rem;
+  }
+
+  &__cross-icon {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,191 @@
+.subscribe {
+  margin-bottom: 8rem;
+  &__grid {
+    width: auto;
+    height: 31.2rem;
+    background-image: url(/img/subscribe/subscribe-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 12rem;
+    border-radius: 3.2rem;
+    display: grid;
+    grid-template-columns: 1fr minmax(50rem, 1fr) 1fr;
+    object-fit: cover;
+
+    @media only screen and(max-width:$bp-1300px) {
+      grid-template-columns: auto;
+      height: auto;
+    }
+    @media only screen and(max-width:$bp-900px) {
+      margin: 0 8rem;
+    }
+    @media only screen and(max-width:$bp-600px) {
+      margin: 0 2rem;
+    }
+  }
+
+  &__left {
+    position: relative;
+    @media only screen and(max-width:$bp-1300px) {
+      display: none;
+    }
+    &--img-1 {
+      position: absolute;
+      top: 3.8rem;
+      left: 4.4rem;
+    }
+    &--img-2 {
+      position: absolute;
+      top: 17.8rem;
+      left: 19.5rem;
+    }
+    &--selfie-1 {
+      position: absolute;
+      top: 7.1rem;
+      left: 20.4rem;
+    }
+    &--selfie-2 {
+      position: absolute;
+      top: 17.3rem;
+      left: 6.7rem;
+    }
+  }
+
+  &__middle {
+    padding: 6.5rem 0;
+    @media only screen and(max-width:$bp-1300px) {
+      // width: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__label {
+    color: $color-black;
+    margin-bottom: 3.2rem;
+
+    text-align: center;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 4.8rem;
+    text-transform: capitalize;
+
+    @media only screen and(max-width:$bp-1300px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__input-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-white;
+    border-radius: 3.2rem;
+    padding: 0.4rem 0.4rem 0.4rem 2.4rem;
+    @media only screen and(max-width:$bp-1300px) {
+      width: 70%;
+    }
+    @media only screen and(max-width:$bp-800px) {
+      width: 95%;
+    }
+    @media only screen and(max-width:$bp-500px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 0.4rem;
+      background-color: transparent;
+    }
+  }
+
+  &__input {
+    margin: 0 1.6rem;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    text-align: center;
+
+    @media only screen and(max-width:$bp-600px) {
+      border-radius: 3.2rem;
+      background-color: $color-white;
+      padding: 1rem;
+    }
+    @media only screen and(max-width:$bp-500px) {
+      height: 4.5rem;
+    }
+    @media only screen and(max-width:$bp-400px) {
+      margin-bottom: 1rem;
+    }
+
+    &-container--left {
+      display: flex;
+      align-items: center;
+
+      @media only screen and(max-width:$bp-600px) {
+        padding: 1.2rem 1.6rem;
+      }
+      @media only screen and(max-width:$bp-600px) {
+        width: 100%;
+      }
+    }
+
+    &::placeholder {
+      color: $color-neutral;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 2.2rem;
+
+      @media only screen and(max-width:$bp-600px) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__btn {
+    border-radius: 3.2rem;
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 1.2rem 1.6rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.2rem;
+  }
+
+  &__email-icon {
+    @media only screen and(max-width:$bp-500px) {
+      display: none;
+    }
+  }
+
+  &__right {
+    position: relative;
+    @media only screen and(max-width:$bp-1300px) {
+      display: none;
+    }
+
+    &--img-1 {
+      position: absolute;
+      top: 4.4rem;
+      left: 8.6rem;
+    }
+    &--img-2 {
+      position: absolute;
+      top: 17.8rem;
+      left: 22.4rem;
+    }
+    &--selfie-1 {
+      position: absolute;
+      top: 7rem;
+      left: 21rem;
+    }
+    &--selfie-2 {
+      position: absolute;
+      top: 12rem;
+      left: 9rem;
+    }
+  }
+}

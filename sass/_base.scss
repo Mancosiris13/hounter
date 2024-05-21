@@ -1,0 +1,72 @@
+//COLOR VARIABLES
+$color-white: #ffffff;
+$color-neutral: #3c4563;
+$color-grey-1: #e0e3eb;
+$color-grey-2: #888b97;
+$color-grey-3: #626687;
+
+$color-primary: #10b981;
+$color-primary-dark: #0b9567;
+$color-primary-light: #d1fae5;
+$color-secondary: #f59e0b;
+$color-black: #1b1c57;
+$color-danger: #ef4444;
+$color-danger-light: #fee2e2;
+$color-info: #1d4ed8;
+$color-info-light: #dbeafe;
+
+$color-black-dark: #0c1930;
+//FONT VARIABLES
+$font-primary: "Lexend";
+
+//RESPONSIVE BREAKPOINTS
+//(bp target in pixels / 16(default browser font size) = em
+
+$bp-1300px: 81.25em; // 1300px / 16 browsers default =81.25em
+$bp-1200px: 75em; // 1200px / 16 browsers default =75em
+$bp-1100px: 68.75em; // 1100px / 16 browsers default =68.75em
+$bp-1000px: 62.5em; // 1000px / 16 browsers default =62.5em
+$bp-900px: 56.25em; //900px / 16 browsers default = 56.25em
+$bp-800px: 50em; //800px / 16 browsers default = 50em
+
+$bp-700px: 43.75em; //700px / 16 browsers default = 43.75em
+$bp-600px: 37.5em; //600px / 16 browsers default = 37.5em
+$bp-500px: 31.25em; //500px / 16 browsers default = 31.25em
+$bp-400px: 25em; //400px / 16 browsers default = 25em
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px(our target) / 16px(default by browser) = 62.5%  --> 1rem = 10px
+
+  @media only screen and(max-width:$bp-500px) {
+    font-size: 55%; // 10px(our target) / 16px(default by browser) = 62.5%  --> 1rem = 10px
+  }
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-grey-3;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.4rem;
+}
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto;
+  max-width: 144rem;
+  overflow-x: hidden;
+  // overflow-x: visible;
+
+  margin: 0 auto; //centering all content
+}
